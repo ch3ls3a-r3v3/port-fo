@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
-import Welcome from "./Welcome";
+import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router-dom";
+
 
 export function App() {
   const [showHome, setShowHome] = useState(false);
@@ -10,6 +10,7 @@ export function App() {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import Welcome from "./routes/Welcome";
 
 
 export function Layout({ children }: { children: React.ReactNode }) {
