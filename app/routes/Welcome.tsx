@@ -1,14 +1,18 @@
 import { motion } from "motion/react";
 import { useState, useEffect } from "react"; 
-import AnimatedBackground from "./AnimatedBackground";
+// import AnimatedBackground from "./AnimatedBackground";
 
 interface WelcomeProps {
   onComplete: () => void;
 }
 
+
+
 export default function Welcome({ onComplete }: WelcomeProps) {
   const [showBackground, setShowBackground] = useState(false);
 
+  
+  
   useEffect(() => {
     // After the seeds drop, show the animated background
     setTimeout(() => setShowBackground(true), 3000);
@@ -49,4 +53,10 @@ export default function Welcome({ onComplete }: WelcomeProps) {
   </div>
   );
 }
-  
+const AnimatedBackground: React.FC = () => {
+  return (
+    <div className="animated-background">
+      {/* Your animation code here */}
+    </div>
+  );
+};
