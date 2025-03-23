@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import Welcome from "./Welcome";
+import Welcome from "./routes";
 
 export function App() {
   const [showHome, setShowHome] = useState(false);
