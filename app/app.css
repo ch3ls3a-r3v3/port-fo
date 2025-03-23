@@ -1,3 +1,20 @@
-@import "tailwindcss/tailwind.css";
-@import "components";
-@import "utilities";
+@import "tailwindcss/vite-plugin";
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+@layer base {
+  body {
+    background-color: #f7fafc; /* bg-gray-100 */
+    color: #1a202c; /* text-gray-900 */
+  }
+}
+@layer components {
+  .component {
+    padding: 1rem; /* p-4 */
+  }
+}
+@layer utilities {
+  .text-center {
+    text-align: center; /* text-center */
+  }
+}
+
