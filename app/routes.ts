@@ -1,3 +1,8 @@
 import { type RouteConfig, index } from "@react-router/dev/routes";
 
-export default [index("routes/home.tsx")] satisfies RouteConfig;
+
+// Automatically register routes based on folder structure
+export default [
+    index("routes/welcome.tsx"), // Registers Welcome.tsx as the entry page 
+    index("routes/home.tsx"), // Registers Home.tsx as the default page 
+   ] satisfies RouteConfig;
