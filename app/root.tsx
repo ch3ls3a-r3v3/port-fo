@@ -1,11 +1,12 @@
-import {
-  isRouteErrorResponse,
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "react-router";
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
+import Welcome from "./welcome";
+
+export default function root() {
+  const [showHome, setShowHome] = useState(false);
+
+  return showHome ? <Outlet /> : <Welcome onComplete={() => setShowHome(true)} />;
+}
 
 import type { Route } from "./+types/root";
 import "./app.css";
