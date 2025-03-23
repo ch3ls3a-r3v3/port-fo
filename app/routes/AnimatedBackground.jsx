@@ -25,16 +25,15 @@ export default function AnimatedBackground() {
             {phase === 2 && (
                 <motion.div
                     className="absolute inset-0 bg-grey-900 opacity-50"
-                    initial={{ opacity: { 0 }}
-                    animate={{ opacity: { 1 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     transition={{ duration: 2 }}
                 >
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black" />
                    </motion.div>
-                }}
-                
-                {/* Sunrise Effect */}
-                {phase === 3 && (
+            )}
+        {/* Sunrise Effect */}
+            {phase === 3 && (
                     <motion.div
                         className="absolute inset-0 bg-gradient-to-b from-blue-600 to-yellow-300"
                         initial={{ opacity: 0 }}
