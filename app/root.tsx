@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import Welcome from "./welcome";
+import Welcome from "./Welcome";
 
-export default function root() {
+export function root() {
   const [showHome, setShowHome] = useState(false);
 
   return showHome ? <Outlet /> : <Welcome onComplete={() => setShowHome(true)} />;
